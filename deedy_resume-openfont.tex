@@ -1,0 +1,221 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Martin}{Ethier}{
+\href{mailto:methier@edu.uwaterloo.ca}{methier@edu.uwaterloo.ca} |
+(705) 303-8890 |
+\urlstyle{same}\href{https://www.linkedin.com/in/ethiermartin/}{linkedin.com/in/ethiermartin} |
+\urlstyle{same}\href{https://github.com/MartinEthier}{github.com/MartinEthier}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\location{Languages}
+Python \textbullet{} C++ \textbullet{} MATLAB \textbullet{} Java
+\textbullet{} Visual Basic \textbullet{} XAML \textbullet{} \LaTeX\ \\
+\location{Libraries and Frameworks}
+Scikit-Learn \textbullet{} Tensorflow \textbullet{} Keras \textbullet{} OpenCV \textbullet{} wxPython \textbullet{} Pandas \textbullet{} ROS \\
+\location{Hardware}
+Raspberry Pi 3 \textbullet{} Arduino \textbullet{} NVIDIA Jetson
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+Data Structures and Algorithms \\
+Microprocessors and Digital Logic \\
+Probability and Statistics \\
+Ordinary Differential Equations \\
+Computational Methods \\
+Circuits \\
+\sectionsep
+
+\subsection{Online}
+\location{Artificial Intelligence for Robotics, Udacity}
+\vspace{\topsep}
+\begin{tightemize}
+\item Course teaches the algorithms behind self-driving cars using Python
+\item Topics covered include graph SLAM, PID control, Particle and Kalman Filters, and A* Searching
+\item Wrote software to control a robot with the goal of autonomously chasing another robot in a simulated environment for final project
+\end{tightemize}
+
+\location{Machine Learning Crash Course, Google}
+\begin{tightemize}
+\item Interactive introductory machine learning course taught using Python and Tensorflow
+\item Topics covered include feature engineering, regression and classification, neural networks, embeddings, and regularization
+\end{tightemize}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Waterloo}
+\descript{Candidate for B.ASc in Mechatronics Engineering}
+\location{Sep. 2016 -  | Waterloo, ON}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interests}
+Autonomous Vehicles \textbullet{} Deep Learning \\ \textbullet{} Machine Vision \textbullet{} Artificial Intelligence \\ \textbullet{} Hockey \textbullet{} Weightlifting \textbullet{} Piano
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Information Processing Coop}\\
+\descript{Communications Research Centre}
+\location{Sep. 2018 – Dec. 2018 | Kanata, ON}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Developed cell network map data visualization tools using wxPython and the Google Maps Static API, allowing researchers for quick analysis of the data
+\item Used Keras and Scikit-Learn to develop new spatial interpolation algorithms for cell network measurement data with neural networks and random forest 
+\item Introduced rotational features in data to reduce error and smooth out interpolated map
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CT Analysis Research Assistant}\\
+\descript{Multi-Scale Additive Manufacturing Lab}
+\location{Jan. 2018 – Apr. 2018 | Waterloo, ON}
+\begin{tightemize}
+\item Utilized the Matlab Image Processing Toolbox to develop complex image processing software for analysis of CT scanned image stacks of 3D printed metal parts
+\item Used techniques such as histogram thresholding, flood fill, and watershed segmentation in order to acquire 3D porosity data from the parts
+\item Imaged the parts using a Nano-CT Scanner and a Laser Scanning Confocal Microscope
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Medical Physics Assistant}\\
+\descript{London Health Sciences Centre} 
+\location{May 2018 - Aug. 2018 | London, ON}
+\begin{tightemize}
+\item Used IronPython to develop scripts designed to automate and streamline various processes involved with the creation of radiation treatment plans 
+\item Utilized Visual Studio with XAML to design custom GUIs that were implemented in the scripts
+\item Irradiated radio-chromic gels using medical linear accelerators and analyzed images of the gels in Matlab to get near-surface dose measurements   
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TEAMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teams}
+\runsubsection{UW Robotics}
+\descript{| Software Team Member}
+\location{Jan. 2019 – Present | Waterloo, ON}
+\begin{tightemize}
+\item ROS, C++, Python, Jetson, OpenCV
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Dog Breed Classifier}
+\descript{| Android App}
+\location{Sep. 2018 – Present}
+\begin{tightemize}
+\item App allows user to take a picture of their dog and tells them what breed of dog it is, including possible mixes
+\item Utilized Keras transfer learning to implement Google's InceptionV3 CNN model using data set of ~20000 labeled images
+\item Implemented data augmentation to get an accuracy of over 80 percent on testing data
+\item Currently designing Android app using Android Studio and Java to integrate model
+\end{tightemize}
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
